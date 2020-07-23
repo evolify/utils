@@ -10,6 +10,7 @@
     "publish": {
       "conventionalCommits": true,
       "yes": true,
+      "createRelease": true,
       "message": "chore(release): publish a new version"
     }
   }

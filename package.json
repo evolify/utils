@@ -10,7 +10,8 @@
     "c": "git-cz",
     "boot": "lerna bootstrap",
     "build": "lerna run build",
-    "pub": "lerna publish"
+    "pub": "lerna publish",
+    "pub:gpr": "lerna publish from-package --yes --registry https://npm.pkg.github.com/"
   },
   "commitlint": {
     "extends": [
