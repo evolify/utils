@@ -1,6 +1,6 @@
 {
   "name": "@evolify/utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "js utils.",
   "keywords": [
     "js",
@@ -36,6 +36,6 @@
     "url": "https://github.com/evolify/utils/issues"
   },
   "dependencies": {
-    "@evolify/dom-utils": "^0.1.0"
+    "@evolify/dom-utils": "^0.2.0"
   }
 }
