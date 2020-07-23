@@ -9,7 +9,8 @@
     },
     "publish": {
       "conventionalCommits": true,
-      "yes": true
+      "yes": true,
+      "message": "chore(release): publish a new version"
     }
   }
 }

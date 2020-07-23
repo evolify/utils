@@ -9,19 +9,7 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run boot
-      - run: npm run build
-
-  publish-npm:
-    needs: build
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,27 +17,16 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm run boot
+      - run: npm run build
       - run: git config user.name 'evolify'
       - run: git config user.email 'wolf@evolify.cn'
-      - run: npm ci
       - run: npm run pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - run: git config user.name 'evolify'
-      - run: git config user.email 'wolf@evolify.cn'
-      - run: npm ci
-      - run: npm run pub
+      - run: lerna publish from-package --yes --registry https://npm.pkg.github.com/
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

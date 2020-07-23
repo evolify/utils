@@ -1,11 +1,12 @@
-# `dom`
+# `@evolify/dom-utils`
 
-> TODO: description
+> dom utils.
 
 ## Usage
 
-```
-const dom = require('dom');
+```js
+import { className } from "@evolify/dom-utils"
 
-// TODO: DEMONSTRATE API
+const disable = false
+className("item", disable && "disabled") // "item disabled"
 ```
