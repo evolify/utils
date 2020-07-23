@@ -5,8 +5,12 @@
 ## Usage
 
 ```js
-import { className } from "@evolify/dom-utils"
+import { className, getCookie } from "@evolify/dom-utils"
 
+// className
 const disable = false
 className("item", disable && "disabled") // "item disabled"
+
+// getCookie
+getCookie("uid")
 ```
