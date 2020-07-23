@@ -1,0 +1,15 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "yes": true
+    }
+  }
+}
