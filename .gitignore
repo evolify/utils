@@ -10,6 +10,9 @@ lerna-debug.log*
 **/*/esm
 **/*/lib
 
+# test
+coverage
+
 # Dependency directories
 node_modules/
 

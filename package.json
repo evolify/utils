@@ -9,6 +9,8 @@
   "scripts": {
     "c": "git-cz",
     "boot": "lerna bootstrap",
+    "test": "lerna run test --since master",
+    "test:all": "lerna run test",
     "build": "lerna run build",
     "pub": "lerna publish",
     "pub:gpr": "lerna publish from-package --yes --registry https://npm.pkg.github.com/"
@@ -26,10 +28,13 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@types/jest": "^26.0.5",
     "commitizen": "^4.1.2",
     "cz-lerna-changelog": "^2.0.3",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "lerna": "^3.20.2",
+    "ts-jest": "^26.1.3",
     "typescript": "^3.9.7"
   }
 }

@@ -1,13 +1,13 @@
 {
-  "name": "@evolify/utils",
-  "version": "0.3.1",
-  "description": "js utils.",
+  "name": "@evolify/math-utils",
+  "version": "0.1.0",
+  "description": "Math utils.",
   "keywords": [
-    "js",
+    "math",
     "utils"
   ],
   "author": "孤狼 <wolf@evolify.cn>",
-  "homepage": "https://github.com/evolify/utils#readme",
+  "homepage": "https://github.com/evolify/utils/tree/master/packages/dom/#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -24,8 +24,9 @@
     "url": "git+https://github.com/evolify/utils.git"
   },
   "scripts": {
+    "test": "jest --config ../../jest.config.js",
     "build:esm": "rm -rf esm && tsc --module es6 --outDir esm",
-    "build:cjs": "rm -rf lib && tsc --module commonjs --outDir lib",
+    "build:cjs": "rm -rf lib && tsc --module commonjs --outDir lib ",
     "build": "npm run build:esm && npm run build:cjs"
   },
   "publishConfig": {
@@ -33,9 +34,5 @@
   },
   "bugs": {
     "url": "https://github.com/evolify/utils/issues"
-  },
-  "dependencies": {
-    "@evolify/dom-utils": "^0.3.1",
-    "@evolify/math-utils": "^0.1.0"
   }
 }

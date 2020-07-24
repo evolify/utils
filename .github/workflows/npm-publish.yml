@@ -17,11 +17,16 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm run boot
-      - run: npm run build
-      - run: git config user.name 'evolify'
-      - run: git config user.email 'wolf@evolify.cn'
+      - name: install、build and test
+        run: |
+          npm ci
+          npm run boot
+          npm run build
+          npm run test
+      - name: config github
+        run: |
+          git config user.name 'evolify'
+          git config user.email 'wolf@evolify.cn'
       - run: npm run pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

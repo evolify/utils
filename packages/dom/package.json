@@ -25,7 +25,7 @@
     "url": "git+https://github.com/evolify/utils.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "jest --config ../../jest.config.js --coverage",
     "build:esm": "rm -rf esm && tsc --module es6 --outDir esm",
     "build:cjs": "rm -rf lib && tsc --module commonjs --outDir lib ",
     "build": "npm run build:esm && npm run build:cjs"
