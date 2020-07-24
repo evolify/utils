@@ -9,7 +9,7 @@
   "scripts": {
     "c": "git-cz",
     "boot": "lerna bootstrap",
-    "test": "lerna run test --since master",
+    "test": "lerna run test --since",
     "test:all": "lerna run test",
     "build": "lerna run build",
     "pub": "lerna publish",
