@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2020-07-24)
+
+
+### Features
+
+* **math:** add math utils ([1447ff6](https://github.com/evolify/utils/commit/1447ff6f550477a978467e3d61d0084b1dc5574d))
+
+
+
+
+
 ## 0.3.1 (2020-07-23)
 
 **Note:** Version bump only for package @evolify/utils
