@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2020-07-24)
+
+**Note:** Version bump only for package @evolify/dom-utils
+
+
+
+
+
 # 0.4.0 (2020-07-24)
 
 
